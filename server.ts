@@ -15,19 +15,7 @@ async function startServer() {
   // Initialize SQLite
   const db = new Database('./database.sqlite');
 
-  // Check and add Evolution API columns if they don't exist
-  const tableInfo = db.pragma('table_info(settings)') as any[];
-  const hasEvolution = tableInfo.some(col => col.name === 'evolutionApiEnabled');
-  
-  if (!hasEvolution) {
-    db.exec(`
-      ALTER TABLE settings ADD COLUMN evolutionApiEnabled INTEGER DEFAULT 0;
-      ALTER TABLE settings ADD COLUMN evolutionApiUrl TEXT DEFAULT '';
-      ALTER TABLE settings ADD COLUMN evolutionApiInstance TEXT DEFAULT '';
-      ALTER TABLE settings ADD COLUMN evolutionApiKey TEXT DEFAULT '';
-    `);
-  }
-
+  // Create tables first
   db.exec(`
     CREATE TABLE IF NOT EXISTS settings (
       id INTEGER PRIMARY KEY,

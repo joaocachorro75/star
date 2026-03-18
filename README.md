@@ -1,20 +1,72 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ⭐ Star - Sistema de Gestão de Pedidos
 
-# Run and deploy your AI Studio app
+Sistema completo para gestão de pedidos online com notificações em tempo real no WhatsApp.
 
-This contains everything you need to run your app locally.
+## 🚀 Funcionalidades
 
-View your app in AI Studio: https://ai.studio/apps/df67dfa7-6d1d-4ac2-b8f3-b24c24e86d90
+- **Gestão de Produtos** - Cadastre e gerencie seus produtos
+- **Pedidos Online** - Receba pedidos diretamente pelo site
+- **Notificações WhatsApp** - Alertas em tempo real via Evolution API
+- **Painel Admin** - Dashboard completo para gestão
+- **SEO Otimizado** - Indexação completa nos buscadores
 
-## Run Locally
+## 🛠️ Tecnologias
 
-**Prerequisites:**  Node.js
+- React 19
+- TypeScript
+- TailwindCSS 4
+- Express.js
+- SQLite (better-sqlite3)
+- Vite
 
+## 📦 Instalação
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+# Clone o repositório
+git clone https://github.com/joaocachorro75/star.git
+
+# Entre na pasta
+cd star
+
+# Instale as dependências
+npm install
+
+# Execute em desenvolvimento
+npm run dev
+
+# Build para produção
+npm run build
+
+# Execute em produção
+npm start
+```
+
+## 🔐 Acesso Admin
+
+- **Usuário:** `admin`
+- **Senha:** `admin123`
+
+## 🌐 Deploy no EasyPanel
+
+1. Crie um novo container
+2. Conecte o repositório GitHub
+3. Configure as variáveis de ambiente:
+   - `NODE_ENV=production`
+   - `PORT=3000`
+4. Deploy!
+
+## 📱 Integração WhatsApp (Evolution API)
+
+Configure no painel admin:
+- URL da Evolution API
+- Nome da instância
+- API Key
+- Número do WhatsApp
+
+## 👨‍💻 Desenvolvido por
+
+**To-Ligado.com** - Soluções digitais inteligentes
+
+---
+
+MIT License
